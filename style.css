@@ -58,6 +58,29 @@ header .container {
   justify-content: center;
 }
 
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  width: 410px;
+  height: 608px;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-movie {
+  display: none;
+}
+
 .logo {
   font-size: 36px;
   font-weight: 700;
