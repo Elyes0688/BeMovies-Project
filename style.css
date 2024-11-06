@@ -38,6 +38,7 @@ header .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #141517;
 }
 
 .searchbar {
@@ -56,6 +57,37 @@ header .container {
 .searchbar .container {
   display: flex;
   justify-content: center;
+}
+
+footer .container {
+  background-color: #141517;
+  height: 186px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  padding: 20px;
+  width: 410px;
+  height: 608px;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-movie {
+  display: none;
 }
 
 .logo {
@@ -91,4 +123,25 @@ header .container {
   height: 40px;
   padding: 10px;
   border-radius: 0px 12px 12px 0px;
+}
+
+footer .container a {
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+}
+footer .container a:hover {
+  transform: scale(1.1);
+  color: rgb(249, 77, 8);
+}
+footer .container p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.79px;
+  text-align: left;
+  color: #B8B8B8;
 }

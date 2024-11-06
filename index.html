@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeMovies Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -29,6 +30,133 @@
         </div>
     </section>
 
+    <div class="modal">
+        <div class="modal-content">
+            <h2 class="signup">Signup</h2><h2 class="login">Login</h2>
+            <form>
+                <input type="text" placeholder="Username">
+                <br>
+                <input type="password" placeholder="Password">
+                <br>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                
+                <label for="checkbox">Remember Me</label>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <a href="#" class="forgot">I forgot my password</a>
+            <p>Not a member? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="popup-movie">
+
+    </div>
+
+    <section class="searchResult">
+        <div class="container">
+        
+            <!-- Slider main container -->
+            <div class="swiper-result">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"></div>
+                    
+                
+                </div>
+             
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+              
+            </div>
+        </div>
+    </section>
+
+    <section class="latestReleases">
+        <div class="container">
+            
+            <h2>Latest Releases</h2> 
+
+            <!-- Slider main container -->
+            <div class="swiper-releases">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"></div>
+                    
+            
+                </div>
+              
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+                
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="genreSection">
+        <div class="container">
+            
+            <h2>Movies by Genre</h2>
+           
+            <div class="genres">
+                <a href="#" class="genre-btn">Comedy</a>
+                <a href="#" class="genre-btn">Drama</a>
+                <a href="#" class="genre-btn">Action</a>
+                <a href="#" class="genre-btn">Romance</a>
+                <a href="#" class="genre-btn">Fantasy</a>
+                <a href="#" class="genre-btn">Animation</a>
+            </div>
+
+            <hr>
+
+            <h2 class="selected-genre"></h2>
+
+            <!-- Slider main container -->
+            <div class="swiper-genres">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"></div>
+            
+                </div>
+        
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+        </div>
+        </section>
+
+        <footer>
+            <div class="container">
+
+                <div class="logo"><span>Be</span>Movies</div>
+                <div class="footer-links">
+                    <a href="#">Search</a>
+                    <a href="#">Latest</a>
+                    <a href="#">Genres</a>
+                    <a href="#">Register</a>
+                    <a href="#">Sign In</a>
+                </div>
+                <p>&copy; 2025 - All rights reserved.</p>
+
+            </div>
+        </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
