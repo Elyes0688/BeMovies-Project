@@ -37,3 +37,33 @@
     padding: 10px;
     border-radius: 0px 12px 12px 0px ;
 }
+
+
+
+
+footer .container {
+
+    a {
+            padding-left: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16.79px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            transition: 0.3s ease-in-out;
+        }
+    
+        a:hover {
+            transform: scale(1.1);
+            color: rgb(249, 77, 8);
+        }
+    
+        p {
+    
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16.79px;
+            text-align: left;
+            color: #B8B8B8;
+        }
+}
