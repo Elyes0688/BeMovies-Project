@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Inria Sans", sans-serif;
+  background-color: rgb(53, 40, 40);
+  color: white;
+}
+
+.container {
+  background-color: #191B20;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 0px;
+}
+.searchbar input {
+  height: 40px;
+  border-radius: 12px 0px 0px 12px;
+  text-align: center;
+  border: none;
+}
+
+.searchbar .container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.16px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.logo span {
+  color: red;
+}
+
+.navbar {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.79px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  display: flex;
+  gap: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  transform: scale(1.1);
+  color: rgb(249, 77, 8);
+}
+
+.searchbar a {
+  display: inline-block;
+  background-color: red;
+  height: 40px;
+  padding: 10px;
+  border-radius: 0px 12px 12px 0px;
+}
