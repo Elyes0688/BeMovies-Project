@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -59,6 +60,22 @@ header .container {
   justify-content: center;
 }
 
+.genreSection .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.genres {
+  display: flex;
+  gap: 30px;
+}
+
+.genreSection h2 {
+  margin-bottom: 40px;
+}
+
 footer .container {
   background-color: #141517;
   height: 186px;
@@ -98,7 +115,7 @@ footer .container {
   text-transform: uppercase;
 }
 .logo span {
-  color: red;
+  color: #CC0000;
 }
 
 .navbar {
@@ -118,11 +135,34 @@ footer .container {
 }
 
 .searchbar a {
-  display: inline-block;
-  background-color: red;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #CC0000;
   height: 40px;
-  padding: 10px;
+  width: 40px;
   border-radius: 0px 12px 12px 0px;
+}
+
+.genres a {
+  padding: 5px;
+}
+
+.genres a:hover {
+  background-color: #CC0000;
+  border-radius: 8px;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  text-align: left;
 }
 
 footer .container a {
