@@ -3,6 +3,7 @@
 @import 'popMovie';
 @import 'utilities';
 
+//LOGO STYLING
 .logo {
    font-size: 36px;
    font-weight: 700;
@@ -15,6 +16,7 @@
    }
 }
 
+//NAVIGATION BAR STYLING
 .navbar {
     font-size: 14px;
     font-weight: 700;
@@ -30,6 +32,7 @@
   @include a-hover;
 }
 
+//SEARCHBAR BUTTON STYLING
 .searchbar a{
     display: inline-flex;
     align-items: center;
@@ -43,6 +46,7 @@
     
 }
 
+//GENRES ANCHORS STYLING
 .genres a {
     padding: 5px;
   
@@ -58,11 +62,12 @@
 
 
 
-
+//LINE STYLING
 hr {
     margin-top: 20px;
 }
 
+//TEXT STYLING
 h2 {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -73,7 +78,7 @@ h2 {
 
 
 
-
+//FOOTER ANCHORS AND TEXT
 footer .container {
 
     a {

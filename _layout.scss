@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
+//GENERAL LAYOUT
+
 * {
 margin: 0;
 padding: 0;
@@ -26,6 +29,8 @@ body {
     color: white;
 }
 
+//CONTAINER STYLING
+
 .container {
     background-color: #191B20;
     max-width: 1440px;
@@ -37,6 +42,8 @@ body {
     padding-bottom: 15px;
 }
 
+//HEADER DISPLAY
+
 header .container {
     display: flex;
     flex-direction: row;
@@ -45,6 +52,8 @@ header .container {
     background-color: #141517;
     
 }
+
+//SEARCHBAR STYLING
 
 .searchbar {
     display: flex;
@@ -66,6 +75,8 @@ header .container {
     justify-content: center;
 }
 
+//GENRES SECTION STYLING
+
 .genreSection .container {
     display: flex;
     justify-content: center;
@@ -81,6 +92,9 @@ header .container {
 .genreSection h2 {
     margin-bottom: 40px;
 }
+
+
+//FOOTER STYLING
 
 footer .container {
     background-color: #141517;
