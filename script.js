@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const BASE_URL = 'https://api.themoviedb.org/3';
     const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
-    // Fonction pour récupérer les derniers films
     async function fetchLatestMovies() {
         try {
             const response = await fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}`);
@@ -15,14 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Fonction pour afficher les derniers films
     function displayLatestMovies(movies) {
         const container = document.querySelector('.swiper-releases .swiper-wrapper');
-        if (!container) {
-            console.error('Container not found for latest movies');
-            return;
-        }
-        container.innerHTML = ''; // Nettoyer les slides précédents
+        if (!container) return console.error('Container for latest movies not found');
+        container.innerHTML = '';
 
         movies.forEach(movie => {
             const slide = document.createElement('div');
@@ -31,11 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
                 <p>${movie.title}</p>
             `;
-            slide.addEventListener('click', () => showMovieDetails(movie));
             container.appendChild(slide);
         });
 
-        // Initialisation de Swiper
         new Swiper('.swiper-releases', {
             loop: true,
             navigation: {
@@ -45,30 +38,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Fonction pour afficher les détails d'un film
-    function showMovieDetails(movie) {
-        const popup = document.querySelector('.popup-movie');
-        if (!popup) {
-            console.error('Popup container not found');
-            return;
+    async function fetchGenres() {
+        try {
+            const response = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
+            if (!response.ok) throw new Error(`Error: ${response.status}`);
+            const data = await response.json();
+            displayGenres(data.genres);
+        } catch (error) {
+            console.error('Error fetching genres:', error);
         }
-        popup.innerHTML = `
-            <div class="modal-content">
-                <h2>${movie.title}</h2>
-                <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
-                <p>${movie.overview}</p>
-                <p><strong>Release Date:</strong> ${movie.release_date}</p>
-                <button class="close-modal">Close</button>
-            </div>
-        `;
-        popup.style.display = 'block';
+    }
 
-        // Bouton pour fermer la modale
-        popup.querySelector('.close-modal').addEventListener('click', () => {
-            popup.style.display = 'none';
+    function displayGenres(genres) {
+        const genresContainer = document.querySelector('.genres');
+        if (!genresContainer) return console.error('Genres container not found');
+        genresContainer.innerHTML = '';
+
+        genres.forEach(genre => {
+            const genreLink = document.createElement('a');
+            genreLink.href = '#';
+            genreLink.textContent = genre.name;
+            genreLink.addEventListener('click', () => {
+                fetchMoviesByGenre(genre.id, genre.name);
+            });
+            genresContainer.appendChild(genreLink);
         });
     }
 
-    // Appel initial pour charger les derniers films
+    async function fetchMoviesByGenre(genreId, genreName) {
+        try {
+            const response = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`);
+            if (!response.ok) throw new Error(`Error: ${response.status}`);
+            const data = await response.json();
+            displayMoviesByGenre(data.results, genreName);
+        } catch (error) {
+            console.error('Error fetching movies by genre:', error);
+        }
+    }
+
+    function displayMoviesByGenre(movies, genreName) {
+        const container = document.querySelector('.swiper-genres .swiper-wrapper');
+        if (!container) return console.error('Container for genre movies not found');
+        container.innerHTML = '';
+
+        movies.forEach(movie => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            slide.innerHTML = `
+                <img src="${IMAGE_BASE_URL}${movie.poster_path}" alt="${movie.title}">
+                <p>${movie.title}</p>
+            `;
+            container.appendChild(slide);
+        });
+
+        new Swiper('.swiper-genres', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next-genres',
+                prevEl: '.swiper-button-prev-genres',
+            },
+        });
+    }
+
+    // Charger les sections
     fetchLatestMovies();
+    fetchGenres();
 });
