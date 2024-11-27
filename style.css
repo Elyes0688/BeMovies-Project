@@ -20,7 +20,7 @@ img {
 
 body {
   font-family: "Inria Sans", sans-serif;
-  background-color: rgb(53, 40, 40);
+  background-color: #212326;
   color: white;
 }
 
@@ -88,27 +88,166 @@ footer .container {
   align-items: center;
 }
 
-.modal {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 65%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  padding: 20px;
-  width: 410px;
-  height: 608px;
-  z-index: 1001;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+
+ .modal {
+   display: none;
+   position: absolute;
+   top: 25%;
+   left: 65%;
+   transform: translate(-50%, -50%);
+   background-color: black;
+   padding: 40px;
+   width: 410px;
+   height: 608px;
+   z-index: 1001;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ .close-modal {
+  display: block;
+   font-size: 3rem;
+   cursor: pointer;
+   margin-bottom: 20px;
+   
+
+ }
+
+ .close-modal:hover {
+  color: #CC0000;
+ }
+
+ .loghead {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   border: 1px white solid;
+   cursor: pointer;
+
+   border-radius: 8px;
+   padding: 15px;
+
 }
 
-.modal-content {
-  display: flex;
-  flex-direction: column;
+.loghead h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
+
+ .modal-content {
+   display: flex;
+   flex-direction: column;
+
+
+ }
+
+ form {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-top: 30px;
+
+
+ }
+
+ form input[type="text"],
+ form input[type="password"] {
+   width: 100%;
+   height: 44px;
+   border-radius: 8px;
+   padding-left: 10px;
+ }
+
+ .checkbox {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+
+
+ }
+
+ .checkbox input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+ }
+
+ .login-modal {
+   text-transform: uppercase;
+   width: 100%;
+   height: 47px;
+   background-color: #CC0000;
+   border-radius: 8px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+   
+ }
+
+ .forgot {
+  color: #CC0000;
+  margin-bottom: 15px;
+ }
+
+ .signupa {
+  color: #CC0000;
+  padding-left: 5px;
+ }
+
+/*  //POP UP STYLING */
 
 .popup-movie {
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 742px;
+  height: auto;
+  max-height: 90vh;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  overflow-y: auto;
+  border-radius: 7px;
+  z-index: 1001;
+}
+
+.close-pop {
+  position: absolute;
+  font-size: 3rem;
+  right: 20px;
+}
+
+.popup-content {
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.popup-content img {
+  width: 234px;
+  height: 351px;
+  top: 74px;
+  left: 79px;
+  gap: 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.movie-info-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
 }
 
 .swiper {
@@ -134,6 +273,7 @@ footer .container {
   height: 400px;
   width: 200px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .swiper-slide img {
