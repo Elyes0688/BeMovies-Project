@@ -251,16 +251,16 @@ footer .container {
 }
 
 .swiper {
-  width: 600px;
-  height: 300px;
-}
+  width: 100%;
 
-
-.swiper-container {
-  width: 200px;
-  height: 400px;
+  height: auto;
   position: relative;
+  overflow: hidden;
+
 }
+
+
+
 
 .swiper-wrapper {
   display: flex;
@@ -274,13 +274,13 @@ footer .container {
   width: 200px;
   overflow: hidden;
   cursor: pointer;
-}
+} 
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} 
 
 .movie-overlay {
   position: absolute;
@@ -397,10 +397,7 @@ footer .container p {
   color: #B8B8B8;
 }
 
-.swiper {
-  width: 600px;
-  height: 300px;
-}
+
 
 
 
