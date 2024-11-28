@@ -62,8 +62,6 @@ header .container {
   justify-content: center;
 }
 
-
-
 .genreSection .container {
   display: flex;
   justify-content: center;
@@ -88,118 +86,120 @@ footer .container {
   align-items: center;
 }
 
-
-
- .modal {
-   display: none;
-   position: absolute;
-   top: 25%;
-   left: 65%;
-   transform: translate(-50%, -50%);
-   background-color: black;
-   padding: 40px;
-   width: 410px;
-   height: 608px;
-   z-index: 1001;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
- }
-
- .close-modal {
-  display: block;
-   font-size: 3rem;
-   cursor: pointer;
-   margin-bottom: 20px;
-   
-
- }
-
- .close-modal:hover {
-  color: #CC0000;
- }
-
- .loghead {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   border: 1px white solid;
-   cursor: pointer;
-
-   border-radius: 8px;
-   padding: 15px;
-
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #141517;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: hidden;
 }
 
-.loghead h2 {
+.modal-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #CC0000;
+}
+
+.modal h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FF6347;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  font-size: 1.5rem;
 }
 
- .modal-content {
-   display: flex;
-   flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
+form input {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 14px;
+  background-color: #191B20;
+  color: white;
+}
 
- }
+form input::placeholder {
+  color: #B8B8B8;
+}
 
- form {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding-top: 30px;
+form input:focus {
+  outline: 2px solid #FF6347;
+}
 
+form button {
+  width: 90%;
+  height: 40px;
+  background-color: #CC0000;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
- }
+form button:hover {
+  background-color: #FF6347;
+}
 
- form input[type="text"],
- form input[type="password"] {
-   width: 100%;
-   height: 44px;
-   border-radius: 8px;
-   padding-left: 10px;
- }
+.switch-to-login,
+.switch-to-signup {
+  font-size: 14px;
+  color: #FF6347;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
- .checkbox {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   align-items: center;
-   gap: 10px;
-
-
- }
-
- .checkbox input[type="checkbox"] {
-  margin: 0;
-  width: 18px;
-  height: 18px;
- }
-
- .login-modal {
-   text-transform: uppercase;
-   width: 100%;
-   height: 47px;
-   background-color: #CC0000;
-   border-radius: 8px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: 50px;
-   
- }
-
- .forgot {
+.switch-to-login:hover,
+.switch-to-signup:hover {
   color: #CC0000;
-  margin-bottom: 15px;
- }
+}
 
- .signupa {
+.modal p {
+  font-size: 14px;
+  color: #B8B8B8;
+}
+
+.modal a {
+  color: #FF6347;
+  text-decoration: underline;
+}
+
+.modal a:hover {
   color: #CC0000;
-  padding-left: 5px;
- }
+}
 
-/*  //POP UP STYLING */
-
+/* POP UP STYLING */
 .popup-movie {
   display: none;
   position: fixed;
@@ -207,60 +207,110 @@ footer .container {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  max-width: 742px;
+  max-width: 700px;
   height: auto;
   max-height: 90vh;
   padding: 20px;
-  background-color: black;
+  background-color: #191B20;
   color: white;
   overflow-y: auto;
-  border-radius: 7px;
+  border-radius: 12px;
   z-index: 1001;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
 }
 
 .close-pop {
   position: absolute;
-  font-size: 3rem;
+  top: 15px;
   right: 20px;
+  font-size: 24px;
+  color: #FF6347;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-pop:hover {
+  color: #CC0000;
 }
 
 .popup-content {
-  background-color: black;
-  padding: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
 }
 
 .popup-content img {
-  width: 234px;
-  height: 351px;
-  top: 74px;
-  left: 79px;
-  gap: 0px;
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
+  flex-shrink: 0;
+  width: 250px;
+  height: 375px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
 }
 
 .movie-info-popup {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 40px;
+  justify-content: space-between;
 }
 
+.movie-info-popup h2 {
+  font-size: 24px;
+  color: #FF6347;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.movie-info-popup p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #B8B8B8;
+}
+
+.movie-info-popup p strong {
+  color: white;
+  font-weight: 600;
+}
+
+.movie-info-popup .movie-description {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #B8B8B8;
+}
+
+.movie-info-popup .movie-description strong {
+  color: #FF6347;
+  font-weight: 700;
+}
+
+.movie-info-popup button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background-color: #CC0000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-info-popup button:hover {
+  background-color: #FF6347;
+}
+
+/* SWIPER */
 .swiper {
   width: 100%;
-
   height: auto;
   position: relative;
   overflow: hidden;
-
 }
-
-
-
 
 .swiper-wrapper {
   display: flex;
@@ -274,13 +324,13 @@ footer .container {
   width: 200px;
   overflow: hidden;
   cursor: pointer;
-} 
+}
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} 
+}
 
 .movie-overlay {
   position: absolute;
@@ -397,18 +447,14 @@ footer .container p {
   color: #B8B8B8;
 }
 
-
-
-
-
 /* Style commun pour les titres */
 .latest-releases h2,
 .genreSection h2 {
-  font-size: 30px; /* Taille de texte moyenne */
-  font-weight: 600; /* Gras modéré */
-  text-align: center; /* Centrer le texte */
-  margin-bottom: 20px; /* Espacement en bas */
-  color: #FF6347; /* Une couleur attrayante et uniforme */
-  text-transform: uppercase; /* Mettre en majuscules pour l'importance */
-  margin-top: 20px; /* Espacement en haut */
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FF6347;
+  text-transform: uppercase;
+  margin-top: 20px;
 }

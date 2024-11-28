@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
         <div class="container">
@@ -19,8 +18,8 @@
                 <a href="#">Search</a>
                 <a href="#">Latest</a>
                 <a href="#">Genres</a>
-                <a href="#">Register</a>
-                <a href="#">Login</a>
+                <a href="#register" class="register-link">Register</a>
+                <a href="#login" class="login-link">Login</a>
             </div>
         </div>
     </header>
@@ -28,138 +27,98 @@
     <!-- SEARCHBAR SECTION -->
     <section class="searchbar">
         <div class="container">
-
             <input type="text" class="input" placeholder="Search for a movie">
             <a href="#" class="submit">&rarr;</a>
-
         </div>
     </section>
-  
 
-    <!-- MODAL HANDELING -->
-
+    <!-- MODAL HANDLING -->
     <div class="modal">
         <div class="modal-content">
-            <div class="close-modal">&times;</div>
-            <div class="loghead">
-            <h2 class="signup">Signup</h2>
-            <h2 class="login">Login</h2>
-            </div>
-            <form>
-                <input type="text" placeholder="Username">
-                <br>
-                <input type="password" placeholder="Password">
-                <br>
+            <span class="close-modal">&times;</span>
+            <!-- Section Login -->
+            <div class="login">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                    <br>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <br>
+                    <button type="submit" class="login-button">Login</button>
                 </form>
-                <div class="checkbox">
-                <input type="checkbox" id="checkbox" name="checkbox">
-
-                <label for="checkbox">Remember Me</label>
-                </div>
-                <br>
-                <a href="#" class="login-modal">Login</a>
-            
-            <a href="#" class="forgot">I forgot my password</a>
-            <p>Not a member? <a href="#" class="signupa">Sign up</a></p>
+                <p>Not a member? <a href="#" class="switch-to-signup">Sign Up</a></p>
+            </div>
+            <!-- Section Sign Up -->
+            <div class="signup" style="display: none;">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <br>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <br>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <br>
+                    <button type="submit" class="signup-button">Sign Up</button>
+                </form>
+                <p>Already a member? <a href="#" class="switch-to-login">Log In</a></p>
+            </div>
         </div>
     </div>
 
-    <!-- POPUP MOVIE HANDELING -->
-
+    <!-- POPUP MOVIE HANDLING -->
     <div class="popup-movie">
-        <div class="close-pop">&times;</div>
         <div class="popup-content">
-            
-            <div class="movie-info">
-                
-            </div>
+            <span class="close-pop">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-year"></p>
+            <p id="popup-synopsis"></p>
         </div>
-
     </div>
 
     <!-- SEARCH RESULT SECTION -->
     <section class="search">
-    <div class="container">
-    <div class="swiper swiper-search">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            
-    
+        <div class="container">
+            <div class="swiper swiper-search">
+                <div class="swiper-wrapper"></div>
+            </div>
         </div>
-    
-    
-    
-    </div>
-    </div>
     </section>
 
     <!-- LATEST RELEASES SECTION -->
     <section class="latest-releases">
         <div class="container">
-
             <h2>Latest Releases</h2>
-
-            <!-- Slider main container -->
             <div class="swiper swiper-releases">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-
-                </div>
-
-
-               
-
-
+                <div class="swiper-wrapper"></div>
             </div>
-
         </div>
     </section>
 
     <!-- GENRES SECTION -->
-
     <section class="genreSection">
         <div class="container">
-
             <h2>Movies by Genre</h2>
-
-            <div class="genres">
-                
-            </div>
-
+            <div class="genres"></div>
             <hr>
-
             <h2 class="selected-genre"></h2>
-
-            <!-- Slider main container -->
             <div class="swiper swiper-genres">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    
-                </div>
-
-                
-
+                <div class="swiper-wrapper"></div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-
     <footer>
         <div class="container">
-
             <div class="logo"><span>Be</span>Movies</div>
             <div class="footer-links">
                 <a href="#">Search</a>
                 <a href="#">Latest</a>
                 <a href="#">Genres</a>
-                <a href="#">Register</a>
-                <a href="#">Sign In</a>
+                <a href="#register">Register</a>
+                <a href="#login">Sign In</a>
             </div>
             <p>&copy; 2025 - All rights reserved.</p>
-
         </div>
     </footer>
 
