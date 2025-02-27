@@ -11,11 +11,7 @@ Il inclut une barre de recherche, l’affichage des dernières sorties, la navig
 2. [Fonctionnalités](#fonctionnalités)  
 3. [Technologies Utilisées](#technologies-utilisées)  
 4. [Installation](#installation)  
-5. [Usage](#usage)  
-6. [Structure des Fichiers](#structure-des-fichiers)  
-7. [Personnalisation](#personnalisation)  
-8. [Contributions](#contributions)  
-9. [Licence](#licence)
+
 
 ---
 
@@ -68,3 +64,5 @@ Il inclut une barre de recherche, l’affichage des dernières sorties, la navig
 1. **Cloner le dépôt**  
    ```bash
    git clone https://github.com/<votre-compte-github>/BeMovies.git
+
+
