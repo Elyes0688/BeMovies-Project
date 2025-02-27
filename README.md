@@ -1,6 +1,6 @@
 # BeMovies-Project
 
-# BeMovies
+
 
 **BeMovies** est un projet front-end permettant de rechercher et d’afficher des informations sur des films à partir de l’API de [The Movie Database (TMDb)](https://www.themoviedb.org/).  
 Il inclut une barre de recherche, l’affichage des dernières sorties, la navigation par genre, ainsi que des pop-ups pour la connexion et l’inscription, et un pop-up détaillé pour consulter les informations d’un film.
